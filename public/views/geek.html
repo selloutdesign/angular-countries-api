@@ -1,5 +1,8 @@
 <div class="jumbotron text-center">
-	<h1>Geek City</h1>
-
-	<p>{{ tagline }}</p>
+	<h1> {{country}} </h1>
+	<h3>Capital: {{ city }}</h3>
+	<p>Population: {{pop | number}}</p>
+	<p>Area: {{ area | number}} </p>
+	<p>Population of Capital: {{popCap | number}}</p>
+	{{noNeighbors}} neighbors: <span ng-repeat="country in neighbordata"> {{country.toponymName}}{{$last ? '' : ', '}}</span>
 </div>

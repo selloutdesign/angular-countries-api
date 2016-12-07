@@ -8,12 +8,12 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			controller: 'MainController'
 		})
 
-		.when('/nerds', {
+		.when('/countries', {
 			templateUrl: 'views/nerd.html',
 			controller: 'NerdController'
 		})
 
-		.when('/geeks', {
+		.when('/countries/:countryCode/:city', {
 			templateUrl: 'views/geek.html',
 			controller: 'GeekController'	
 		});

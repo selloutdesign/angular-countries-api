@@ -2,4 +2,44 @@
 	<h1>Nerds and Proud</h1>
 
 	<p>{{ tagline }}</p>
+	<div class="datagrid">
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Country Code</th>
+				<th>Capital</th>
+				<th>Area in km2</th>
+				<th>Population</th>
+				<th>Continent</th>
+			</tr>
+		</thead>
+		
+			<tr ng-repeat="country in countryData.geonames.country">
+				
+				<td>
+				<a ng-href="/countries/{{country.countryCode}}/{{country.capital}}" >
+					{{country.countryName}}
+					</a>
+				</td>
+				<td>
+					{{country.countryCode}}
+				</td>
+				<td>
+					{{country.capital}}
+				</td>
+				<td>
+					{{country.areaInSqKm | number}}
+				</td>
+				<td>
+					{{country.population | number}}
+				</td>
+				<td>
+					{{country.continent}}
+				</td>
+
+			</tr>
+		</table>
+	</div>
+	
 </div>

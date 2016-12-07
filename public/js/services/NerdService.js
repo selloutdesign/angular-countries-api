@@ -1,5 +1,8 @@
-angular.module('NerdService', []).factory('Nerd', ['$http', function($http) {
-
+angular.module('NerdService', [])
+.factory('Nerd', ['$http', '$q', function($http, $q) {
+	return{
+		
+	}
 	
 
 }]);
